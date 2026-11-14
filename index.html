@@ -12,104 +12,126 @@
       box-sizing: border-box;
     }
 
-    :root {
-      --bg: #000000;
-      --panel: #ffffff;
-      --text: #ffffff;
-    }
-
     body {
-      margin: 0;
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: Georgia, 'Times New Roman', serif;
       background: #ffffff;
+      width: 100%;
+      min-height: 100vh;
     }
 
     .card {
+      width: 100%;
       max-width: 720px;
-      margin: 20px auto;
+      margin: 0 auto;
       background: #ffffff;
-      box-shadow: none;
     }
 
-    /* PHOTO SECTION - WHITE BACKGROUND */
+    /* PHOTO SECTION */
 
     .photo-area {
-      padding: 30px 20px 10px;
-      text-align: center;
+      width: 100%;
       background: #ffffff;
+      padding: 20px 15px 25px;
+      text-align: center;
     }
 
     .photo-area img {
       width: 240px;
       height: 320px;
       object-fit: cover;
-      border: 6px solid #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      display: block;
+      margin: 0 auto;
+      border: 5px solid #ffffff;
     }
 
-    /* INFORMATION SECTION - FULL BLACK */
+    /* BLACK INFORMATION SECTION */
 
     .info {
       background: #000000;
       color: #ffffff;
-      padding: 30px 24px;
+      margin: 0 12px;
+      padding: 22px 20px 28px;
     }
+
+    /* ROW ALIGNMENT */
 
     .row {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-      gap: 10px;
-    }
-
-    .row:last-child {
-      border-bottom: 0;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      align-items: center;
+      gap: 5px;
+      padding: 17px 0;
+      width: 100%;
     }
 
     .label {
+      font-size: 16px;
       font-weight: 700;
-      letter-spacing: 1px;
-      font-size: 18px;
-      width: 45%;
       color: #ffffff;
+      text-align: left;
+      line-height: 1.25;
     }
 
     .value {
-      text-align: right;
-      width: 55%;
+      font-size: 16px;
       font-weight: 700;
-      font-size: 18px;
       color: #ffffff;
+      text-align: right;
+      line-height: 1.25;
       overflow-wrap: anywhere;
     }
 
-    .institute {
-      white-space: pre-line;
-      text-align: right;
-    }
-
-    /* MOBILE RESPONSIVE */
+    /* MOBILE SCREEN */
 
     @media (max-width: 600px) {
+
+      .photo-area {
+        padding: 15px 10px 20px;
+      }
 
       .photo-area img {
         width: 160px;
         height: 210px;
       }
 
-      .label,
-      .value {
-        font-size: 16px;
+      .info {
+        margin: 0 10px;
+        padding: 18px 15px 25px;
       }
 
-      .card {
-        margin: 10px;
+      .row {
+        grid-template-columns: 40% 60%;
+        gap: 4px;
+        padding: 15px 0;
       }
+
+      .label {
+        font-size: 14px;
+        letter-spacing: 0;
+      }
+
+      .value {
+        font-size: 14px;
+        line-height: 1.3;
+      }
+    }
+
+    /* SMALL MOBILE */
+
+    @media (max-width: 360px) {
 
       .info {
-        padding: 25px 22px;
+        padding-left: 11px;
+        padding-right: 11px;
+      }
+
+      .row {
+        grid-template-columns: 39% 61%;
+      }
+
+      .label,
+      .value {
+        font-size: 13px;
       }
     }
 
@@ -120,7 +142,7 @@
 
   <div class="card">
 
-    <!-- PHOTO SECTION -->
+    <!-- PHOTO AREA WHITE -->
 
     <div class="photo-area">
       <img
@@ -128,7 +150,7 @@
         alt="Candidate Image">
     </div>
 
-    <!-- BLACK INFORMATION SECTION -->
+    <!-- INFORMATION AREA BLACK -->
 
     <div class="info">
 
@@ -139,17 +161,19 @@
 
       <div class="row">
         <div class="label">CANDIDATE'S NAME:</div>
-        <div class="value">Muhammad Ilyas</div>
+        <div class="value">MUHAMMAD ILYAS</div>
       </div>
 
       <div class="row">
         <div class="label">FATHER'S NAME:</div>
-        <div class="value">Muhammad Ijaz</div>
+        <div class="value">MUHAMMAD IJAZ</div>
       </div>
 
       <div class="row">
         <div class="label">NAME OF INSTITUTE:</div>
-        <div class="value institute">IDEAL ENGLISH GRAMMAR HIGHER SECONDARY SCHOOL</div>
+        <div class="value">
+          IDEAL ENGLISH GRAMMAR HIGHER SEC SCHOOL
+        </div>
       </div>
 
       <div class="row">
@@ -163,13 +187,22 @@
       </div>
 
       <div class="row">
-        <div class="label">Date Of Birth:</div>
+        <div class="label">DATE OF BIRTH:</div>
         <div class="value">01-OCT-1999</div>
       </div>
 
       <div class="row">
-        <div class="label">Exam Venue:</div>
-        <div class="value">GOVT, BOYS SEC, SCHOOL NO.9 SECTOR 8L ORANGI TOWN</div>
+        <div class="label">EXAM VENUE:</div>
+        <div class="value">
+          GOVT. BOYS SEC, SCHOOL NO.9 SECTOR 8-L ORANGI TOWN
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">VENUE ADDRESS:</div>
+        <div class="value">
+          SECTOR 8-L, ORANGI TOWN, KARACHI WEST, SINDH, PAKISTAN
+        </div>
       </div>
 
     </div>
