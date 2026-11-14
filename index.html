@@ -1,79 +1,177 @@
-<!doctype html>
-<html lang="ur">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Candidate Card</title>
-  <style>
-    :root{--bg:#0b0b0b;--panel:#fff;--text:#fff}
-    body{margin:0;font-family: Georgia, 'Times New Roman', Times, serif;background:#f2f2f2}
-    .card{max-width:720px;margin:20px auto;background:var(--panel);box-shadow:0 4px 18px rgba(0,0,0,.15)}
-    .photo-area{padding:30px 20px 10px;text-align:center;background:#fff}
-    .photo-area img{width:240px;height:320px;object-fit:cover;border:6px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.15)}
-    .info{background:var(--bg);color:var(--text);padding:30px 24px}
-    .row{display:flex;justify-content:space-between;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04)}
-    .row:last-child{border-bottom:0}
-    .label{font-weight:700;letter-spacing:1px;font-size:18px;width:45%;}
-    .value{text-align:right;width:45%;font-weight:700;font-size:18px}
-    .institute{white-space:pre-line;text-align:right;}
 
-    @media (max-width:600px){
-      .photo-area img{width:160px;height:210px}
-      .label,.value{font-size:16px}
-      .card{margin:10px}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    :root {
+      --bg: #000000;
+      --panel: #ffffff;
+      --text: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background: #ffffff;
+    }
+
+    .card {
+      max-width: 720px;
+      margin: 20px auto;
+      background: #ffffff;
+      box-shadow: none;
+    }
+
+    /* PHOTO SECTION - WHITE BACKGROUND */
+
+    .photo-area {
+      padding: 30px 20px 10px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .photo-area img {
+      width: 240px;
+      height: 320px;
+      object-fit: cover;
+      border: 6px solid #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    /* INFORMATION SECTION - FULL BLACK */
+
+    .info {
+      background: #000000;
+      color: #ffffff;
+      padding: 30px 24px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      gap: 10px;
+    }
+
+    .row:last-child {
+      border-bottom: 0;
+    }
+
+    .label {
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 18px;
+      width: 45%;
+      color: #ffffff;
+    }
+
+    .value {
+      text-align: right;
+      width: 55%;
+      font-weight: 700;
+      font-size: 18px;
+      color: #ffffff;
+      overflow-wrap: anywhere;
+    }
+
+    .institute {
+      white-space: pre-line;
+      text-align: right;
+    }
+
+    /* MOBILE RESPONSIVE */
+
+    @media (max-width: 600px) {
+
+      .photo-area img {
+        width: 160px;
+        height: 210px;
+      }
+
+      .label,
+      .value {
+        font-size: 16px;
+      }
+
+      .card {
+        margin: 10px;
+      }
+
+      .info {
+        padding: 25px 22px;
+      }
+    }
+
   </style>
 </head>
+
 <body>
 
   <div class="card">
 
+    <!-- PHOTO SECTION -->
+
     <div class="photo-area">
-      <!-- Aapka Base64 Image Added Here -->
-      <img src="IMG-20241230-WA0009.jpg"> <alt="Candidate Image">
+      <img
+        src="IMG-20241230-WA0009.jpg"
+        alt="Candidate Image">
     </div>
+
+    <!-- BLACK INFORMATION SECTION -->
 
     <div class="info">
 
       <div class="row">
         <div class="label">ROLL NO:-</div>
-        <div class="value" id="roll">658457</div>
+        <div class="value">658457</div>
       </div>
 
       <div class="row">
         <div class="label">CANDIDATE'S NAME:</div>
-        <div class="value" id="name">Muhammad Ilyas</div>
+        <div class="value">Muhammad Ilyas</div>
       </div>
 
       <div class="row">
         <div class="label">FATHER'S NAME:</div>
-        <div class="value" id="father">Muhammad Ijaz</div>
+        <div class="value">Muhammad Ijaz</div>
       </div>
 
       <div class="row">
         <div class="label">NAME OF INSTITUTE:</div>
-        <div class="value institute" id="institute">IDEAL ENGLISH GRAMMAR HIGHER SECONDARY SCHOOL</div>
+        <div class="value institute">IDEAL ENGLISH GRAMMAR HIGHER SECONDARY SCHOOL</div>
       </div>
 
       <div class="row">
         <div class="label">ENROLLMENT NO:</div>
-        <div class="value" id="enroll">ZUEB/S.S.C/2024/658457</div>
+        <div class="value">ZUEB/S.S.C/2024/136529</div>
       </div>
 
       <div class="row">
         <div class="label">GROUP:</div>
-        <div class="value" id="group">PRIVATE SCIENCE</div>
+        <div class="value">PRIVATE SCIENCE</div>
       </div>
 
       <div class="row">
         <div class="label">Date Of Birth:</div>
-        <div class="value" id="group">01-OCT-1999</div>
+        <div class="value">01-OCT-1999</div>
       </div>
 
       <div class="row">
-        <div class="label">Exam Vanue:</div>
-        <div class="value" id="group">GOVT, BOYS SEC, SCHOOL NO.9 SECTOR 8L ORANGI TOWN</div>
+        <div class="label">Exam Venue:</div>
+        <div class="value">GOVT, BOYS SEC, SCHOOL NO.9 SECTOR 8L ORANGI TOWN</div>
       </div>
+
     </div>
 
   </div>
